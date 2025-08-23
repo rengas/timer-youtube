@@ -1,0 +1,245 @@
+.pomodoro-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .pomodoro-container {
+    padding: 16px;
+  }
+}
+
+/* Timer Section */
+.pomodoro-timer-section {
+  background: var(--background-secondary);
+  border-radius: 16px;
+  padding: 32px 24px;
+  color: var(--text-normal);
+  text-align: center;
+  border: 1px solid var(--background-modifier-border);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.pomodoro-timer-display {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-accent);
+  position: relative;
+  z-index: 1;
+}
+
+.pomodoro-progress-container {
+  width: 100%;
+  height: 8px;
+  background: var(--background-modifier-border);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.pomodoro-progress-bar {
+  height: 100%;
+  background: var(--interactive-accent);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.pomodoro-controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.pomodoro-status {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+/* Music Section */
+.pomodoro-music-section {
+  background: var(--background-secondary);
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid var(--background-modifier-border);
+  width: 100%;
+}
+
+.pomodoro-music-section h3 {
+  margin: 0 0 24px 0;
+  color: var(--text-normal);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pomodoro-youtube-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.pomodoro-youtube-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pomodoro-youtube-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+.pomodoro-url-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.pomodoro-url-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-family: inherit;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.pomodoro-url-input:focus {
+  outline: none;
+  border-color: var(--interactive-accent);
+}
+
+/* Buttons */
+.pomodoro-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pomodoro-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+}
+
+.pomodoro-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.pomodoro-btn.start {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.pomodoro-btn.pause {
+  background: var(--color-orange);
+  color: var(--text-on-accent);
+}
+
+.pomodoro-btn.reset {
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+}
+
+.pomodoro-btn.update-music {
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  width: 100%;
+}
+
+.pomodoro-btn.update-music {
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  white-space: nowrap;
+}
+
+.pomodoro-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.pomodoro-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pomodoro-timer-display {
+    font-size: 3rem;
+  }
+  
+  .pomodoro-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pomodoro-btn {
+    width: 200px;
+  }
+  
+  .pomodoro-url-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pomodoro-btn.update-music {
+    width: 100%;
+  }
+  
+  .pomodoro-youtube-container {
+    height: 200px;
+  }
+}
+
+/* Animation for timer completion */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pomodoro-timer-complete {
+  animation: pulse 1s ease-in-out 3;
+}

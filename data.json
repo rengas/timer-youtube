@@ -1,0 +1,9 @@
+{
+  "workDuration": 25,
+  "breakDuration": 5,
+  "longBreakDuration": 15,
+  "sessionsUntilLongBreak": 4,
+  "autoStartBreaks": false,
+  "enableNotifications": true,
+  "youtubePlaylistUrl": "https://www.youtube.com/watch?v=tAIiXRZNh9E"
+}
