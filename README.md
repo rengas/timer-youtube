@@ -2,6 +2,10 @@
 
 A comprehensive productivity plugin that combines the Pomodoro Technique with integrated note-taking and background music, all within your Obsidian workspace.
 
+<img width="1855" height="956" alt="Screenshot 2025-08-23 at 8 23 03 AM" src="https://github.com/user-attachments/assets/3d0581f5-4ba6-4d92-8dec-d205d5673edc" />
+
+
+
 ## Features
 
 ### 🍅 Pomodoro Timer
