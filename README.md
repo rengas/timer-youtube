@@ -1,4 +1,4 @@
-# Pomodoro Productivity Plugin for Obsidian
+# Timer Youtube for Obsidian
 
 A comprehensive productivity plugin that combines the Pomodoro Technique with integrated note-taking and background music, all within your Obsidian workspace.
 
@@ -8,19 +8,12 @@ A comprehensive productivity plugin that combines the Pomodoro Technique with in
 
 ## Features
 
-### 🍅 Pomodoro Timer
+### 🍅 Timer
 - Customizable work sessions (default: 25 minutes)
 - Short and long breaks (default: 5 and 15 minutes)
 - Visual progress indicators with beautiful gradients
 - Audio notifications when sessions complete
 - Auto-start options for seamless workflow
-
-### 📝 Integrated Note-Taking
-- Session notes directly saved to your vault
-- Automatic file creation with timestamps
-- Plan your next session while reviewing current progress
-- Organized storage in a dedicated folder
-- Markdown formatting support
 
 ### 🎵 Background Music
 - Embedded YouTube player for playlists or individual videos
@@ -51,12 +44,6 @@ A comprehensive productivity plugin that combines the Pomodoro Technique with in
 3. Set your session notes and next session plan
 4. Click "Start" to begin your first Pomodoro session
 
-### Managing Sessions
-
-- **Work Sessions**: Take notes on what you accomplished
-- **Breaks**: Plan what you'll work on next
-- **Notes**: Automatically saved to your designated folder
-- **Timer**: Visual progress bar and large time display
 
 ### Settings
 
@@ -69,18 +56,6 @@ Access plugin settings through Obsidian's settings panel:
 - **Notes Folder**: Choose where session notes are saved
 - **Music URL**: Set your default YouTube playlist
 
-## File Structure
-
-Session notes are saved as:
-```
-[Notes Folder]/Pomodoro [Date].md
-```
-
-Each session creates an entry with:
-- Session number and timestamp
-- Your accomplishments
-- Next session plan
-- Separating dividers for easy reading
 
 ## Tips for Best Results
 
